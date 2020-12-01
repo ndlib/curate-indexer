@@ -14,7 +14,7 @@ jobs:
       with:
         ruby-version: 2.6
     - name: Install bundler
-      run: gem install bundler -v 1.12
+      run: gem install bundler
     - name: Install bundled dependencies
       run: bundle install
     - name: Test & publish code coverage
