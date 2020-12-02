@@ -28,7 +28,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "terminal-notifier-guard"
   spec.add_development_dependency "terminal-notifier"
   spec.add_development_dependency "rubocop"
-  spec.add_development_dependency "simplecov"
+  spec.add_development_dependency "simplecov", "~> 0.17.1"
   spec.add_development_dependency "codeclimate-test-reporter"
   spec.add_development_dependency "json"
   spec.add_development_dependency "byebug"
