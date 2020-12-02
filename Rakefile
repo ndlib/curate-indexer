@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "bundler/gem_tasks"
 require "rspec/core/rake_task"
 
@@ -16,9 +18,7 @@ namespace :commitment do
     $stdout.puts "Checking commitment:code_coverage"
     coverage_percentage = JSON.parse(File.read('coverage/.last_run.json')).fetch('result').fetch('covered_percent').to_i
     goal = 100
-    if goal > coverage_percentage
-      abort("Code Coverage Goal Not Met:\n\t#{coverage_percentage}%\tExpected\n\t#{goal}%\tActual")
-    end
+    abort("Code Coverage Goal Not Met:\n\t#{coverage_percentage}%\tExpected\n\t#{goal}%\tActual") if goal > coverage_percentage
   end
 end
 
